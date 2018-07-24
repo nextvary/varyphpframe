@@ -1,0 +1,21 @@
+{
+	"require": {
+      "illuminate/database": "*",
+		"predis/predis": "^1.1"
+	},
+	"autoload": {
+	    "classmap": [  
+	        "app"
+	    ],
+	     "files": [
+            "app/common/function.php"
+        ],
+        "psr-4": {
+            "app\\": "app/",
+            "Swoole\\":"vendor/Swoole/",
+            "vary\\":"vendor/vary/",
+            "varywork\\":"vendor/varywork/"
+        }
+
+	}
+}
