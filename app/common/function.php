@@ -1,6 +1,7 @@
 <?php
 function config($param){
     $fenge=DIRECTORY_SEPARATOR;
+
     $params=explode('.',$param);
     $file=$params[0];
     $key=$params[1];
@@ -11,4 +12,13 @@ function config($param){
 }
 function app_path(){
     return  dirname(__DIR__);
+}
+function base_path(){
+    return  dirname(app_path());
+}
+
+function storage_path(){
+    $fenge=DIRECTORY_SEPARATOR;
+    return base_path().$fenge.'storage'.$fenge.'/logs/';
+
 }

@@ -31,8 +31,13 @@ class ComposerStaticInitc060feffb62aa5ddb4bc07e835600f49
         'P' => 
         array (
             'Psr\\SimpleCache\\' => 16,
+            'Psr\\Log\\' => 8,
             'Psr\\Container\\' => 14,
             'Predis\\' => 7,
+        ),
+        'M' => 
+        array (
+            'Monolog\\' => 8,
         ),
         'I' => 
         array (
@@ -76,6 +81,10 @@ class ComposerStaticInitc060feffb62aa5ddb4bc07e835600f49
         array (
             0 => __DIR__ . '/..' . '/psr/simple-cache/src',
         ),
+        'Psr\\Log\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
+        ),
         'Psr\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
@@ -83,6 +92,10 @@ class ComposerStaticInitc060feffb62aa5ddb4bc07e835600f49
         'Predis\\' => 
         array (
             0 => __DIR__ . '/..' . '/predis/predis/src',
+        ),
+        'Monolog\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
         'Illuminate\\Support\\' => 
         array (

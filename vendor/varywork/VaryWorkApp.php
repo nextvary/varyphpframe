@@ -1,5 +1,7 @@
 <?php
 namespace varywork;
+use Monolog\Handler\StreamHandler;
+use Monolog\Logger;
 use Predis\Client;
 use varywork\DB\DB;
 
@@ -27,7 +29,7 @@ class VaryWorkApp{
         if(!class_exists($class)) throw new \Exception( ucwords($controller) .'  Class Not Exists!!!');
 
         $fun=[new $class,ucwords($action)];
-        if(!is_callable($fun,true,$method) ) throw new \Exception($method.'not found!!');
+        if(!method_exists(new $class,ucwords($action)) ) throw new \Exception('method:' .$action .' not found!!');
         $this->f=$f;
         $this->request_url=$request_url;
         $this->class=$class;
@@ -51,12 +53,21 @@ class VaryWorkApp{
     }
 
 
-
+    public function log($error){
+        $log = new Logger('work');
+        $log->pushHandler(new StreamHandler(storage_path().'work.log', Logger::WARNING));
+        $log->pushProcessor(new \Monolog\Processor\WebProcessor());
+        $log->error($error);
+    }
 	public function Error($errno, $errstr, $errfile, $errline){
-        echo "<b>Custom error:</b> [$errno] $errstr<br>";
-        echo " Error on line $errline in $errfile<br>";
+        echo "<b>Error:</b> [$errno] $errstr  on line $errline in $errfile<br>";
+        $this->log(json_encode([$errno,$errstr,$errline,$errfile],320));
+        die();
     }
     public function Exception($ex){
         echo "Uncaught exception: " , $ex->getMessage(), "\n";
+        $this->log($ex->getMessage());
+        die();
+
     }
 }
