@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c3f60c4b-a791-4d91-ae1d-637df6025932" name="默认" comment="1,">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/config/database.php" afterPath="$PROJECT_DIR$/config1/database.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/config/index.php" afterPath="$PROJECT_DIR$/config1/index.php" />
+    <list default="true" id="c3f60c4b-a791-4d91-ae1d-637df6025932" name="默认" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="work.iws" />
@@ -332,12 +329,20 @@
       <option name="presentableId" value="Default" />
       <updated>1532400648070</updated>
       <workItem from="1532400649327" duration="15252000" />
-      <workItem from="1532420098552" duration="51000" />
+      <workItem from="1532420098552" duration="162000" />
     </task>
+    <task id="LOCAL-00001" summary="1,gitignore config">
+      <created>1532420178836</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1532420178836</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15303000" />
+    <option name="totallyTimeSpent" value="15414000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -373,6 +378,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1,gitignore config" />
+    <option name="LAST_COMMIT_MESSAGE" value="1,gitignore config" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
