@@ -6,7 +6,7 @@ use Predis\Client;
 use varywork\DB\DB;
 
 class VaryWorkApp{
-    private static $app;
+    public static $app;
     public $f;
     public  static function app(){
         return self::$app;
@@ -15,6 +15,7 @@ class VaryWorkApp{
         set_exception_handler(array($this, 'Exception'));
         set_error_handler(array($this, 'Error'));
 
+        header('content-type:text/html;charset=utf-8');
 	}
 
 	public function getInstance($f='front'){
@@ -34,7 +35,9 @@ class VaryWorkApp{
         $this->request_url=$request_url;
         $this->class=$class;
         self::$app=$this;
-        call_user_func_array($fun,[$this,$request_url]);
+        echo call_user_func_array($fun,[$this,$request_url]);
+
+
 
     }
 

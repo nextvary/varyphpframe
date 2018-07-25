@@ -3,6 +3,6 @@ namespace app\front;
 class FrontController{
 
 	public function __construct(){
-		echo 'front_'."<br>";
+//		echo 'front_'."<br>";
 	}
 }
