@@ -19,9 +19,15 @@ class VaryWorkApp{
 	}
 
 	public function getInstance($f='front'){
-
-	    $request_url=trim($_SERVER['PATH_INFO']??'index/index/index','/');
+	    if(isset($_SERVER['PATH_INFO']) && $_SERVER['PATH_INFO']){
+	        $path_info=$_SERVER['PATH_INFO'];
+        }else{
+            $path_info='/index/index/index';
+        }
+	    $request_url=trim($path_info,'/');
         $request=explode('/',$request_url);
+
+//        var_dump($_SERVER);
         $model=$request[0]??'index';
         $controller=$request[1]??'index';
         $action=$request[2]??'index';
